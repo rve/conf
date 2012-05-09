@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Conf : myconf files" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Conf</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rve/conf">View on GitHub</a>
+
+          <h1 id="project_title">Conf</h1>
+          <h2 id="project_tagline">myconf files</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/rve/conf/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/rve/conf/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>set nocompatible
+set backspace=indent,eol,start</p>
+
+<p>colorscheme desert
+set encoding=utf-8
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1,big5 " 如果要打开的文件编码不在此列，那就添加进去
+set termencoding=utf-8</p>
+
+<p>syntax on
+syntax enable
+set number
+set completeopt=longest,menu</p>
+
+<p>set autoread
+set incsearch
+set smartcase
+set autoindent
+set tabstop=3
+set softtabstop=3
+set shiftwidth=4</p>
+
+<p>"test</p>
+
+<p>"Auto complete
+""inoremap (  ()i
+"inoremap [ []i
+"inoremap { {}i
+inoremap $4 {o}O
+"inoremap ' ''i
+"inoremap " ""i
+"inoremap &lt; &lt;&gt;i))</p>
+
+<p>set history=700</p>
+
+<p>filetype plugin indent on</p>
+
+<p>let mapleader=","
+let g:mapleader=","
+nmap w :w!
+nmap q :q!</p>
+
+<p>autocmd FileType c,cpp,java :set cindent
+autocmd FileType c,cpp :map  :make %&lt; 
+autocmd FileType c,cpp :map  :!g++ -g % -o %&lt; &amp;&amp; gdb %&lt; 
+autocmd FileType c,cpp :map  :!./%&lt; 
+autocmd FileType java :map  :!javac % 
+autocmd FileType java :map  :!java %&lt; </p>
+
+<p>imap jj </p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Conf maintained by <a href="https://github.com/rve">rve</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
