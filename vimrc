@@ -25,10 +25,16 @@ set shiftwidth=4
 ""inoremap (  ()<esc>i
 "inoremap [ []<esc>i
 "inoremap { {}<esc>i
-inoremap $4 {<esc>o}<esc>O
 "inoremap ' ''<esc>i
 "inoremap " ""<esc>i
 "inoremap < <><esc>i))
+
+imap jj <esc>
+imap jk <esc>
+imap ;; <esc>
+inoremap $4 {<esc>o}<esc>O
+inoremap kl {<esc>o}<esc>O
+
 
 set history=700
 
@@ -47,5 +53,4 @@ autocmd FileType c,cpp :map <F6> :!./%< <CR>
 autocmd FileType java :map <F5> :!javac % <CR>
 autocmd FileType java :map <F6> :!java %< <CR>
 
-imap jj <esc>
 
