@@ -1,0 +1,18 @@
+#
+# /etc/hosts: static lookup table for host names
+#
+
+#<ip-address>	<hostname.domain.org>	<hostname>
+127.0.0.1	localhost.localdomain	localhost
+::1		localhost.localdomain	localhost
+
+#work work
+::1	bbs.saraba1st.com
+::1	weibo.com
+::1	tieba.baidu.com
+::1	bbs.eve-china.com
+::1	cnbeta.com
+::1	plus.google.com
+::1	www.chiphell.com
+
+

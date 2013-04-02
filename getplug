@@ -1,0 +1,36 @@
+#!/bin/bash
+islink=`sudo ethtool eth0 | grep 'Link detected: yes'`
+if [ -z "$islink" ]
+then
+   exit
+fi
+
+theip='';
+time=`date +%s`
+difftime=0
+while [[ -z $theip && $difftime -lt 60 ]]
+do
+    echo 1 | sudo yah3c &
+    sudo killall dhcpcd
+    sudo dhcpcd eth0
+    sleep 2
+    theip=`ifconfig eth0 | grep inet | grep -v inet6 | grep -v 127.0.0.1 | awk '{print $2}'`
+    sleep 1
+    if [ -z $theip ]
+    then
+        theip=`ifconfig wlan0 | grep inet | grep -v inet6 | grep -v 127.0.0.1 | awk '{print $2}'`
+    fi
+
+    let "difftime=`date +%s`-$time"
+    echo $difftime
+done
+
+sleep 1
+
+isChrome=` ps -e | grep chrome`
+if [ -z "$isChrome" ]
+then
+    google-chrome
+fi
+sleep 2
+exit 0
