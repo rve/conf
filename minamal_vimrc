@@ -47,10 +47,10 @@ nmap <leader>q :q!<cr>
 
 
 autocmd FileType c,cpp,java :set cindent
-autocmd FileType c,cpp :map <F5> :make %< <CR>
-autocmd FileType c,cpp :map <F7> :!g++ -g % -o %< && gdb %< <CR>
+"autocmd FileType c,cpp :map <F5> :make %< <CR>
+autocmd FileType c,cpp :map <F5> :!g++ -g % -o %<.o <CR>
+autocmd FileType c,cpp :map <F7> :!g++ -g % -o %<.o && gdb %< <CR>
 autocmd FileType c,cpp :map <F6> :!./%< <CR>
 autocmd FileType java :map <F5> :!javac % <CR>
 autocmd FileType java :map <F6> :!java %< <CR>
-
 
