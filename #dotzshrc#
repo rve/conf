@@ -32,27 +32,60 @@ ZSH_THEME="cloud"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew ruby zsh-syntax-highlighting)
+plugins=(git github cp archlinux terminator python ruby)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #
-export PATH=/usr/local/bin:/usr/local/sbin:${PATH}
+# autojump config
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-
-alias freq='cut -f1 -d" " ~/.bash_history | sort | uniq -c | sort -nr | head -n 30'
-alias l.='ls -d .* --color=auto'
-alias active='grep -v -e "^$" -e"^ *#"'
-alias lf='ls -Gl | grep ^d' #Only list directories
+export EDITOR=vim
+export rvm_ignore_gemrc_issues=1
+export LC_ALL="zh_CN.UTF-8"
+export LANG="zh_CN.UTF-8"
+alias sps="sudo pacman -S"
+alias p="sudo pacman"
+alias y="yaourt"
+alias sudo='nocorrect sudo'
+s(){
+    if [[ $# == 0 ]]; then
+        sudo $(history -p '!!')
+    else
+        sudo "$@"
+    fi
+}
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
 alias tm='ps -ef | grep'
-  . `brew --prefix`/etc/profile.d/z.sh
-
-alias myip="ifconfig en0 | awk ' NR==4 {print \$2}'"
+alias lsd='ls -Gal | grep ^d' #Only list directories, including hidden ones
+alias l.='ls -d .* --color=auto'
+alias c='clear'
+alias p='pacman'
+alias v='vim'
+alias gpom="git push origin master"
+alias gp="git pull"
+alias mynetstat='netstat -ntulpa'
+alias spu='sudo pacman -Syu'
+alias myip="ifconfig | awk 'NR==2{print \$2}'"
+alias rm='trash-put'
 alias http="myip;python2 -m SimpleHTTPServer"
-alias j="z"
-alias e=emacsclient -t
-alias ec=emacsclient -c
-alias vim=emacsclient -t
-alias vi=emacsclient -t
+alias python="python2"
+alias rake="bundle exec rake"
+alias z="j"
+alias b="bochs -q"
+alias s="scrot -s"
+alias diff="colordiff"
+alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
+setxkbmap -option ctrl:nocaps
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 fortune | cowsay
+
