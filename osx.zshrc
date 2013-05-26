@@ -52,7 +52,7 @@ alias myip="ifconfig en0 | awk ' NR==4 {print \$2}'"
 alias http="myip;python2 -m SimpleHTTPServer"
 alias j="z"
 alias e=emacsclient -t
-alias ec=emacsclient -c
+alias ec=emacsclient -c &
 alias vim=emacsclient -t
-alias vi=emacsclient -t
+
 fortune | cowsay
