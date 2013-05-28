@@ -53,6 +53,6 @@ alias http="myip;python2 -m SimpleHTTPServer"
 alias j="z"
 alias e=emacsclient -t
 alias ec=emacsclient -c &
-alias vim=emacsclient -t
+#alias vim=emacsclient -t
 
 fortune | cowsay
