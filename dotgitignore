@@ -1,0 +1,29 @@
+*.o
+*.tmp
+*.data
+*.in
+*.out
+*.bin
+*.swp
+*.dSYM
+*.pyc
+*.tar.gz
+*#
+*~
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# others
+prac_*
