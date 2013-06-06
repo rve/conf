@@ -71,6 +71,7 @@ alias gp="git pull"
 alias mynetstat='netstat -ntulpa'
 alias spu='sudo pacman -Syu'
 alias myip="ifconfig | awk 'NR==2{print \$2}'"
+alias orm="/usr/bin/rm"
 alias rm='trash-put'
 alias http="myip;python2 -m SimpleHTTPServer"
 alias python="python2"
@@ -83,7 +84,7 @@ alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
 alias ec="emacsclient -c &"
 alias e=emacsclient -t
 alias ec=emacsclient -c &
-alias vim=emacsclient -t
+#alias vim=emacsclient -t
 
 
 setxkbmap -option ctrl:nocaps
