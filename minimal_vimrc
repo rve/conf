@@ -3,7 +3,7 @@ set backspace=indent,eol,start
 
 colorscheme desert
 set encoding=utf-8
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1,big5 " 如果要打开的文件编码不在此列，那就添加进去
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1,big5 
 set termencoding=utf-8
 "language messages zh_CN.ut8-8 " in case of win
 
@@ -11,7 +11,6 @@ syntax on
 syntax enable
 set number
 set completeopt=longest,menu
-
 set autoread
 set incsearch
 set smartcase
@@ -19,17 +18,7 @@ set autoindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
-"test
-
-"Auto complete
 ""inoremap (  ()<esc>i
-"inoremap [ []<esc>i
-"inoremap { {}<esc>i
-"inoremap ' ''<esc>i
-"inoremap " ""<esc>i
-"inoremap < <><esc>i))
-
 imap jj <esc>
 imap jk <esc>
 imap ;; <esc>
@@ -52,6 +41,4 @@ autocmd FileType c,cpp,java :set cindent
 autocmd FileType c,cpp :map <F5> :!g++ -g % -o %<.o <CR>
 autocmd FileType c,cpp :map <F7> :!g++ -g % -o %<.o && gdb %< <CR>
 autocmd FileType c,cpp :map <F6> :!./%< <CR>
-autocmd FileType java :map <F5> :!javac % <CR>
-autocmd FileType java :map <F6> :!java %< <CR>
 
