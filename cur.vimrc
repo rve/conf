@@ -286,6 +286,6 @@ autocmd FileType c,cpp,java :set cindent
 autocmd FileType c,cpp,ss :map <F5> :w<CR>:!g++ -g % -o %<.o && ./%<.o<CR>
 autocmd FileType c,cpp :map <F7> :!g++ -g % -o %<.o && gdb %<.o <CR>
 autocmd FileType c,cpp :map <F6> :!g++ -g % -o %<.o<CR>
-autocmd FileType java :map <F5> :!javac % <CR>
+autocmd FileType java :map <F5> :w<CR>:!javac % && java %<<CR>
 autocmd FileType java :map <F6> :!java %< <CR>
 
