@@ -267,6 +267,7 @@ set shiftwidth=4
 
 imap jj <esc>
 imap jk <esc>
+imap as <esc>
 imap ;; <esc>
 inoremap $4 {<esc>o}<esc>O
 inoremap kl {<esc>o}<esc>O
