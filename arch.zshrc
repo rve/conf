@@ -99,3 +99,6 @@ echo "\n\n*******  TODO  ********\n"
 t
 echo "\n"
 
+
+#######################
+test -r ~/algs4/bin/config.sh && source ~/algs4/bin/config.sh
