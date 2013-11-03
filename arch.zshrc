@@ -43,8 +43,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export rvm_ignore_gemrc_issues=1
-export LC_ALL="zh_CN.UTF-8"
-export LANG="zh_CN.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 alias sps="sudo pacman -S"
 alias p="sudo pacman"
 alias y="yaourt"
@@ -84,6 +84,7 @@ alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
 alias ec="emacsclient -c &"
 alias e=emacsclient -t
 alias ec=emacsclient -c &
+alias em=emacs
 #alias vim=emacsclient -t
 
 
@@ -91,6 +92,8 @@ setxkbmap -option ctrl:nocaps
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:~/local/sml/bin # Add smlnj to PATH for scripting
+SMLROOT="/home/arc/local/sml"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
