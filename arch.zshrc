@@ -43,8 +43,6 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export rvm_ignore_gemrc_issues=1
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US.UTF-8"
 alias sps="sudo pacman -S"
 alias p="sudo pacman"
 alias y="yaourt"
@@ -82,9 +80,9 @@ alias s="scrot -s"
 alias diff="colordiff"
 alias t='python ~/tasks/t.py --task-dir ~/tasks --list tasks'
 alias ec="emacsclient -c &"
-alias e=emacsclient -t
-alias ec=emacsclient -c &
-alias em=emacs
+alias e='emacsclient -t'
+alias ec='emacsclient -c &'
+alias em='emacs -nw'
 #alias vim=emacsclient -t
 
 

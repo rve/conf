@@ -14,15 +14,6 @@
 ;;line num
 (global-linum-mode 1) ; always show line numbers
 (setq linum-format "%d ")  ;set format
-;;Handy replace string
-(global-set-key (kbd "C-c r") 'replace-string)
-;;Handy goto line
-(global-set-key (kbd "C-c j") 'goto-line)
-;;Show column number
-(setq column-number-mode t) 
-;;Big kill ring
-(setq kill-ring-max 200)
-;;Fill column 60
-(setq default-fill-column 60)
+
 
 
