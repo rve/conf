@@ -19,7 +19,7 @@ set softtabstop=4
 set shiftwidth=4
 
 imap jk <esc>
-inoremap kl {<esc>o}<esc>O
+"inoremap kl {<esc>o}<esc>O
 
 filetype plugin indent on
 
