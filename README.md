@@ -3,7 +3,7 @@
 ##About:
 
 My minimal conf files for portable usage.  
-Distribution: `Archlinux` && `OS X`  
+Distribution: `Archlinux` && `OS X`  && `Win`
 
 ##Usage:
 
